@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Josué Loría</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .header h1 {
+                margin: 0;
+                font-size: 32px;
+            }
+
+            .header p {
+                font-size: 18px;
+                color: #666;
+            }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+            .section h2 {
+                font-size: 24px;
+                color: #007bff;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                .section h2:hover {
+                    color: #0056b3;
+                }
+
+        .toggle-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .section h2::after {
+            content: "➕";
+            font-size: 18px;
+        }
+
+        .section.open h2::after {
+            content: "➖";
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        .toggle-content p {
+            margin: 0;
+        }
+        .tab {
+            padding-left:20px;
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+                size: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <div class="header">
+            <h1>Josué Loría 👨‍💻</h1>
+            <p>Software Developer | QA Automation | 💼</p>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="section">
+            <h2>📋 Personal Information</h2>
+            <div class="toggle-content">
+                <p><strong>Phone:</strong> +506 85972117 📞</p>
+                <p><strong>Address:</strong> Goicoechea - Costa Rica 🏠</p>
+                <!-- <p><strong>Website:</strong> <a href="https://jloriag.com">jloriag.com</a> 🌐</p> -->
+            </div>
+    </div>
+
+    <!-- Professional Experience -->
+                <div class="section">
+                    <h2>💼 Professional Experience</h2>
+                    <div class="toggle-content">
+                        <p><strong>Position:</strong> Software developer in Test - <strong> Company: </strong> <a href="https://www.snowflake.com/">Snowflake</a> ❄️</p>
+
+                        <p><strong>Some work maded:</strong></p>
+                        <p class="tab">Developed project from scratch.</p>
+                        <p class="tab">Conducted research on technical aspects.</p>
+                        <p class="tab">Collaborating with team members, including managers, developers, and other QAs.</p>
+                        <br />
+                        <p><strong>Position:</strong> QA automation - <strong> Company: </strong> <a href="https://www.opentext.com/">OpenText</a> 📊</p>
+                        <p><strong>Some work maded:</strong></p>
+                        <p class="tab">My principal contribution was improving and managing regression, preventing future issues and building solid documentation.</p>
+                    </div>
+
+
+                </div>
+
+                <!-- Skills -->
+                <div class="section">
+                    <h2>🛠️ Skills</h2>
+                    <div class="toggle-content">
+                        <p>⚙️ C#, .NET, Java, Php</p>
+                        <p>🔧 Selenium, Cypress, Postman, Testing</p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <h2>🎓 Education</h2>
+                    <div class="toggle-content">
+                        <p><strong> Title Name: </strong>Bachelor's in Computer Science <strong> Place: </strong>Universidad Nacional Costa Rica </p>
+                        <p><strong> Title Name: </strong>Selenium esencial <strong> Place: </strong> LinkedIn Learning <a href="https://www.linkedin.com/learning/certificates/a0a09cc9821663bfcecb7915f0e92a677c823d46906976c0f47cfefbee4e33b2?trk=share_certificate"> Certificate link</a> </p>
+                    </div>
+
+
+                </div>
+
+                <!-- Projects -->
+                <div class="section">
+                    <h2>📂 Online Porfolio</h2>
+                    <div class="toggle-content">
+                        <p><strong>Testing Learning Page (Educational Content) :</strong></p>
+                        <p class="tab"><a href="https://youtube.com/shorts/WSyxPn8UOME?feature=share">SLDC Short</a></p>
+
+                    </div>
+                </div>
+            </div>
+
+    <script>
+        document.querySelectorAll('.section h2').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('open');
+                const content = section.querySelector('.toggle-content');
+                content.style.display = content.style.display === 'none' || !content.style.display ? 'block' : 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
